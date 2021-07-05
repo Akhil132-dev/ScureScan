@@ -27,11 +27,11 @@ such as product name , product id and some other number as well
 
     function storeData(string memory _Producthase) public {
         /**
-        @dev checking if someone try to scan an empty Qr Code so id will deny to access
+        @dev checking if someone try to scan an empty Qr Code so it will deny to access
 
          */
         require(bytes(_Producthase).length > 0);
-        /**checking for the id of the prodcut to duplication means at a time no can*/
+        /**checking for the id of the prodcut to duplication means at a time no can */
         require(identifier[_Producthase].idp == 0);
         /** this will show that product is real */
             identifier[_Producthase].istrue = true;
